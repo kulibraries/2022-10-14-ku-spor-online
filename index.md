@@ -14,9 +14,9 @@ humantime: "1:00 pm - 4:00 pm CDT (UTC-5)"    # human-readable times for the wor
 startdate: 20221014      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 20221014        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Amy Burgin, PhD", "Erin Seybold, PhD"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Jamene Brooks-Keiffer", "Other helpers TBD"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Greta Valentine", "Erin Wolfe", "Jamene Brooks-Kieffer"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["jamenebk@ku.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+collaborative_notes: https://pad.carpentries.org/2022-10-14-ku-spor-online # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -300,7 +300,7 @@ available at https://codimd.carpentries.org
 <h2 id="collaborative_notes">Collaborative Notes</h2>
 
 <p>
-We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
+We will use this <a href="{{ page.collaborative_notes }}" target="_blank">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
 </p>
 <hr/>
 {% endif %}
@@ -394,17 +394,16 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
+  To participate in
   {% if site.carpentry == "swc" %}
   Software Carpentry
   {% elsif site.carpentry == "dc" %}
-  Data Carpentry
+  this
   {% elsif site.carpentry == "lc" %}
   Library Carpentry
   {% endif %}
   workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
+  you will need access to a spreadsheet program such as Microsoft Excel or LibreOffice Calc. You will also need to install or update OpenRefine. Follow directions for your operating system for a <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html#spreadsheet-program" target="_blank">spreadsheet program</a> and <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html#openrefine" target="_blank">OpenRefine</a> at the <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html" target="_blank">workshop setup page</a>. You will also need to <a href="https://datacarpentry.org/ecology-workshop/setup-python-workshop.html#data" target="_blank">download the data</a> and confirm that your preferred browser is up to date. Note that if you already have Microsoft Excel installed on your computer, you will not need to install a different spreadsheet program for this workshop.
 </p>
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
@@ -429,7 +428,6 @@ to include the relevant installation instrucctions.
 {% comment %}
 These are the installation instructions for the tools used
 during the workshop.
-{% endcomment %}
 
 {% if site.carpentry == "swc" %}
 {% include swc/setup.html %}
@@ -442,3 +440,4 @@ Please check the "Setup" page of
 [the lesson site]({{ site.incubator_lesson_site }}) for instructions to follow
 to obtain the software and data you will need to follow the lesson.
 {% endif %}
+{% endcomment %}
